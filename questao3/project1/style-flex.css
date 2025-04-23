@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #111;
+    color: limegreen;
+    margin: 0;
+    font-family: sans-serif;
+  }
+  
+  main, footer {
+    border: 2px solid green;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  header {
+    border: 2px solid green;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  header > span {
+    width: 30%;
+    box-sizing: border-box;
+  }
+  
+  nav {
+    width: 70%;
+    border: 2px solid yellow;
+    padding: 5px;
+    background-color: #222;
+    color: white;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .coluna-esquerda {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .artigos {
+    border: 2px solid yellow;
+    padding: 10px;
+  }
+  
+  .artigos article {
+    border: 2px solid blue;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  .extra {
+    border: 2px solid yellow;
+    padding: 10px;
+  }
+  
+  aside {
+    flex: 1;
+    border: 2px solid yellow;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  aside section {
+    border: 2px solid blue;
+    padding: 10px;
+  }
+  
+  footer {
+    text-align: left; 
+    padding: 10px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: stretch; 
+    }
+  
+    header > span {
+      width: 100%; 
+      text-align: center; 
+    }
+  
+    nav {
+      width: 100%; 
+    }
+  
+    .container {
+      flex-direction: column; 
+    }
+  
+    .coluna-esquerda {
+      flex: 0; 
+      width: 100%; 
+    }
+  
+    aside {
+      flex: 0; 
+      width: 100%; 
+      flex-direction: row; 
+      flex-wrap: wrap; 
+      justify-content: space-between; 
+    }
+  
+    aside section {
+      width: calc(50% - 5px); 
+      margin-bottom: 10px; 
+    }
+  
+    
+    @media (max-width: 480px) {
+      aside section {
+        width: 100%;
+      }
+    }
+  
+    footer {
+      text-align: center; 
+    }
+  }
+  
+  
+  @media (min-width: 769px) {
+    header {
+      flex-direction: row; 
+      align-items: center;
+    }
+  
+    header > span {
+      width: 30%;
+      text-align: left; 
+    }
+  
+    nav {
+      width: 70%;
+    }
+  
+    .container {
+      flex-direction: row; 
+    }
+  
+    .coluna-esquerda {
+      flex: 3;
+      width: auto; 
+    }
+  
+    aside {
+      flex: 1;
+      width: auto; 
+      flex-direction: column; 
+      flex-wrap: nowrap; 
+      justify-content: flex-start; 
+    }
+  
+    aside section {
+      width: 100%; 
+      margin-bottom: 0; 
+    }
+  
+    footer {
+      text-align: left; 
+    }
+  }

@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  color: limegreen;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+main, footer {
+  border: 2px solid green;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+header {
+  border: 2px solid green;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 30% 70%; 
+  gap: 10px;
+  align-items: center;
+}
+
+header > span {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+nav {
+  border: 2px solid yellow;
+  padding: 5px;
+  background-color: #222;
+  color: white;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 3fr 1fr; 
+  gap: 10px;
+}
+
+.coluna-esquerda {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+}
+
+.artigos {
+  border: 2px solid yellow;
+  padding: 10px;
+}
+
+.artigos article {
+  border: 2px solid blue;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.extra {
+  border: 2px solid yellow;
+  padding: 10px;
+}
+
+aside {
+  border: 2px solid yellow;
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+}
+
+aside section {
+  border: 2px solid blue;
+  padding: 10px;
+}
+
+footer {
+  text-align: left;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+
+  header {
+    grid-template-columns: 1fr; 
+  }
+
+  .container {
+    grid-template-columns: 1fr; 
+  }
+
+  .coluna-esquerda {
+    padding: 5px;
+  }
+
+  .artigos {
+    padding: 5px;
+  }
+
+  aside {
+    padding: 5px;
+  }
+
+  footer {
+    text-align: center; 
+  }
+
+ 
+  body {
+    font-size: 14px;
+  }
+
+  header, .container, .coluna-esquerda, aside {
+    padding: 5px;
+  }
+
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .artigos article, aside section {
+    padding: 10px;
+    border: 2px solid blue;
+  }
+
+  .extra, .artigos {
+    padding: 5px;
+  }
+}
